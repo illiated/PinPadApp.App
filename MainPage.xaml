@@ -1,41 +1,218 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PinPadApp.MainPage">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PinPadApp.MainPage"
+    Shell.NavBarIsVisible="false">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid
+        BackgroundColor="#222222"
+        ColumnDefinitions="*"
+        Padding="50"
+        RowDefinitions="1*,4*,Auto">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Label
+            FlexLayout.Basis="30%"
+            FontSize="16"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalTextAlignment="Center"
+            TextColor="#FFFFFF"
+            VerticalTextAlignment="End"
+            x:Name="LabelTitle" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <HorizontalStackLayout
+            Grid.Column="0"
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            Margin="0,0,0,50"
+            Spacing="10"
+            RotationY="180"
+            VerticalOptions="End"
+            x:Name="StackLayoutPinView" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+        <Grid
+            ColumnDefinitions="Auto,Auto,Auto"
+            ColumnSpacing="30"
+            Grid.Column="0"
+            Grid.Row="2"
+            HorizontalOptions="CenterAndExpand"
+            RowDefinitions="Auto,Auto,Auto,Auto"
+            RowSpacing="30"
+            VerticalOptions="EndAndExpand">
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                BackgroundColor="#444444"
+                Clicked="ButtonOne_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="0"
+                Grid.Row="0"
+                Text="1"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
 
-        </VerticalStackLayout>
-    </ScrollView>
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonTwo_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="1"
+                Grid.Row="0"
+                Text="2"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonThree_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="2"
+                Grid.Row="0"
+                Text="3"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonFour_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="0"
+                Grid.Row="1"
+                Text="4"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonFive_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="1"
+                Grid.Row="1"
+                Text="5"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonSix_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="6"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonSeven_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="0"
+                Grid.Row="2"
+                Text="7"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonEight_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="1"
+                Grid.Row="2"
+                Text="8"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonNine_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="2"
+                Grid.Row="2"
+                Text="9"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <BoxView
+                Color="#AAAAAA"
+                CornerRadius="35"
+                Grid.Column="0"
+                Grid.Row="3"
+                HeightRequest="70"
+                WidthRequest="70"/>
+
+            <Image
+                Grid.Column="0"
+                Grid.Row="3"
+                HeightRequest="25"
+                Margin="0,0,4,0"
+                Source="backspace.svg"
+                WidthRequest="25" />
+
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="ButtonBackspace_Clicked"
+                CornerRadius="35"
+                Grid.Column="0"
+                Grid.Row="3"
+                HeightRequest="70"
+                WidthRequest="70" />
+
+            <Button
+                BackgroundColor="#444444"
+                Clicked="ButtonZero_Clicked"
+                CornerRadius="35"
+                FontSize="35"
+                HeightRequest="70"
+                Grid.Column="1"
+                Grid.Row="3"
+                Text="0"
+                TextColor="#FFFFFF"
+                WidthRequest="70" />
+
+            <BoxView
+                Color="#AAAAAA"
+                CornerRadius="35"
+                Grid.Column="2"
+                Grid.Row="3"
+                HeightRequest="70"
+                WidthRequest="70"/>
+
+            <Image
+                Grid.Column="2"
+                Grid.Row="3"
+                HeightRequest="25"
+                Margin="0,0,5,0"
+                Source="enter.svg"
+                WidthRequest="25" />
+
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="ButtonSubmit_Clicked"
+                CornerRadius="35"
+                Grid.Column="2"
+                Grid.Row="3"
+                HeightRequest="70"
+                WidthRequest="70" />
+
+        </Grid>
+
+    </Grid>
 
 </ContentPage>

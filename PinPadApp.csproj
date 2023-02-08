@@ -49,6 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\backspace.svg" />
+	  <None Remove="Resources\Images\enter.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="CorrectPinPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
